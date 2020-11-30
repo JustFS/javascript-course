@@ -8,16 +8,18 @@ for (i = 0; i < array2.length; i++) {
   console.log("Element numéro : " + [i] + " est un " + typeof array2[i]);
 }
 
-let link = "";
+// ****************************************
 
 const input = document.getElementById("input");
 const video = document.getElementById("video");
+let link = "";
 
 input.addEventListener("input", (e) => {
   console.log(e.target.value);
-  link = e.target.value;
+  changeLink(e.target.value);
 
-  video.innerHTML = `
+  if (link) {
+    video.innerHTML = `
       <iframe
         width="654"
         height="491"
@@ -26,4 +28,10 @@ input.addEventListener("input", (e) => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>`;
+  }
 });
+
+const changeLink = (linkToChange) => {
+  embed = linkToChange.replace("watch?v=", "embed/");
+  link = embed.split("&")[0];
+};
