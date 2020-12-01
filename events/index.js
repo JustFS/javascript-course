@@ -1,3 +1,10 @@
+const btn = document.querySelector('#btn')
+const img = document.getElementById('img')
+
+btn.addEventListener('click', (e) => {
+  img.classList.toggle("show")
+})
+
 const mouseEvent = document.querySelector(".mouseEvent");
 const horizontal = document.querySelector(".horizontal");
 const vertical = document.querySelector(".vertical");
@@ -14,12 +21,6 @@ mouseEvent.addEventListener("mousemove", (e) => {
   }
 });
 
-const btn = document.querySelector('#btn')
-
-btn.addEventListener('click', (e) => {
-  document.getElementById('img').classList.toggle("show")
-})
-
 const input = document.getElementById('input');
 
 input.addEventListener('input', (e) => {
@@ -27,9 +28,7 @@ input.addEventListener('input', (e) => {
   vertical.innerHTML = e.target.value
 })
 
-const dark = document.querySelector('.dark')
-const yellow = document.querySelector('.yellow')
-const green = document.querySelector('.green')
+
 const theme = document.querySelectorAll('.theme')
 
 theme.forEach((item) =>

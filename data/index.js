@@ -1,21 +1,22 @@
-let array1 = ["javascript", "html", "css"];
-let array2 = ["From Scratch", 33, ["javascript", "html", "css"], true];
+let array = ["From Scratch", 33, ["javascript", "html", "css"], true];
 
-console.log(array1[0][4]);
+console.log(array[0][4]);
 
-for (i = 0; i < array2.length; i++) {
-  console.log(array2[i]);
-  console.log("Element numéro : " + [i] + " est un " + typeof array2[i]);
+for (i = 0; i < array.length; i++) {
+  console.log(array[i]);
+  console.log("Element numéro : " + [i] + " est un " + typeof array[i]);
 }
 
-// ****************************************
+const numbers = [21, 45, 1, 22, 44, 7]
+numbers.sort();
 
+
+// ****************************************
 const input = document.getElementById("input");
 const video = document.getElementById("video");
 let link = "";
 
 input.addEventListener("input", (e) => {
-  console.log(e.target.value);
   changeLink(e.target.value);
 
   if (link) {
